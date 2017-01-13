@@ -1,54 +1,40 @@
 import api from '../../../api/api.js'
+import util from '../../../utils/util.js'
 
 Page({
   data: {
-    type: '',
     title: '',
-    articles: []
+    monthly: []
   },
   onLoad: function (options) {
     this.setData({ 
       title: options.title
     })
-    
-    let { type, month } = options
-    api.getArticlesByMonth({
+    api.getVolsByMonth({
       query: {
-        type: type,
-        month: month
+        month: options.month
       },
       success: (res) => {
         if (res.data.res === 0) {
-          let articles = res.data.data
-          this.setData({
-            type: type,
-            articles: articles
+          let monthly = res.data.data
+
+          monthly.map((vol) => {
+            vol.hp_makettime = util.formatMakettime(vol.hp_makettime)
           })
+          this.setData({ monthly })
         }
       }
-    })
+    }) 
   },
   onReady: function () {
     wx.setNavigationBarTitle({
       title: this.data.title
     })
   },
-  tapEssay: function (e) {
-    var id = e.currentTarget.dataset.id
+  handleTap: function (e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../essay/essay?id=' + id
+      url: '../detail/detail?id=' + id
     })
-  },
-  tapSerial: function (e) {
-    var id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: '../serial/serial?id=' + id
-    })
-  },
-  tapQuestion: function (e) {
-    var id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: '../question/question?id=' + id
-    })
-  },
+  }
 })

@@ -1,69 +1,19 @@
-import api from '../../api/api.js'
-
+// pages/reading/reading.js
 Page({
-  data: {
-    carousel: [],
-    articles: {},
-    current: 0
+  data:{},
+  onLoad:function(options){
+    // 页面初始化 options为页面跳转所带来的参数
   },
-  onLoad: function () {
-    api.getCarousel({
-      success: (res) => {
-        if (res.data.res === 0) {
-          let carousel = res.data.data
-          this.setData({ carousel })
-        }
-      }
-    })
-    
-    api.getLastArticles({
-      success: (res) => {
-        if (res.data.res === 0) {
-          let articles = res.data.data
-          this.setData({ articles })
-        }
-      }
-    })
+  onReady:function(){
+    // 页面渲染完成
   },
-  onReady: function () {
-    wx.setNavigationBarTitle({
-      title: '阅读'
-    })
+  onShow:function(){
+    // 页面显示
   },
-  tapEssay: function (e) {
-    let id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: 'essay/essay?id=' + id
-    })
+  onHide:function(){
+    // 页面隐藏
   },
-  tapSerial: function (e) {
-    let id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: 'serial/serial?id=' + id
-    })
-  },
-  tapQuestion: function (e) {
-    let id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: 'question/question?id=' + id
-    })
-  },
-  handleChange: function (e) {
-    let current = e.detail.current
-    let length = this.data.articles.essay.length
-
-    if (current === length) {
-      this.setData({
-        current: length
-      })
-      wx.navigateTo({
-        url: '../history/history?page=reading',
-        success: () => {
-          this.setData({
-            current: length - 1
-          })
-        }
-      })
-    }
+  onUnload:function(){
+    // 页面关闭
   }
 })

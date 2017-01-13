@@ -23,7 +23,7 @@ Page({
   },
   onReady: function () {
     wx.setNavigationBarTitle({
-      title: '音乐'
+      title: '龙广之声'
     })
   },
   getMusics: function (idList) {

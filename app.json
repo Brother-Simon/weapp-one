@@ -2,12 +2,12 @@
   "pages":[
     "pages/index/index",
     "pages/index/monthly/monthly",
-    "pages/index/detail/detail",
-    "pages/reading/reading",
+    "pages/index/essay/essay",
+    "pages/index/serial/serial",
+    "pages/index/question/question",
+    "pages/reading/index",
     "pages/reading/monthly/monthly",
-    "pages/reading/essay/essay",
-    "pages/reading/serial/serial",
-    "pages/reading/question/question",
+    "pages/reading/detail/detail",
     "pages/music/music",
     "pages/music/monthly/monthly",
     "pages/music/detail/detail",
@@ -18,7 +18,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "ONE",
+    "navigationBarTitleText": "黑龙江交通广播",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -27,23 +27,23 @@
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/index/reading",
       "text": "首页",
       "iconPath": "image/home.png",
       "selectedIconPath": "image/home_active.png"
     }, {
-      "pagePath": "pages/reading/reading",
-      "text": "阅读",
+      "pagePath": "pages/reading/index",
+      "text": "交通现场",
       "iconPath": "image/reading.png",
       "selectedIconPath": "image/reading_active.png"
     },{
       "pagePath": "pages/music/music",
-      "text": "音乐",
+      "text": "龙广之声",
       "iconPath": "image/music.png",
       "selectedIconPath": "image/music_active.png"
     },{
       "pagePath": "pages/movie/movie",
-      "text": "电影",
+      "text": "我的",
       "iconPath": "image/movie.png",
       "selectedIconPath": "image/movie_active.png"
     }]
