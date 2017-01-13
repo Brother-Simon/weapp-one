@@ -1,15 +1,15 @@
 <template name="vol-item">
   <view class="vol-card">
-    <image class="vol-picture" src="{{item.hp_img_url}}" mode="aspectFill"></image>
+    <image class="vol-picture" src="/image/img1.jpg" mode="aspectFill"></image>
     <view class="vol-meta">
-      <text class="vol-number">{{item.hp_title}}</text>
-      <text class="vol-author">{{item.hp_author}}</text>
+      <text class="vol-number">NO.1</text>
+      <text class="vol-author">审讯现场图</text>
     </view>
     <view class="vol-content">
-      <text class="vol-content-text">{{item.hp_content}}</text>
+      <text class="vol-content-text">奥迪男撞飞交警，现已投案自首,奥迪男撞飞交警，现已投案自首奥迪男撞飞交警，现已投案自首奥迪男撞飞交警，现已投案自首</text>
     </view>
     <view class="vol-makettime">
-      <text class="vol-makettime-text">{{item.hp_makettime}}</text>
+      <text class="vol-makettime-text">2017-1-13 12:00:00</text>
     </view>
   </view>
 </template>

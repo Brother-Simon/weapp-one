@@ -23,7 +23,8 @@
 }
 
 .article-item {
-  padding: 30rpx;
+  margin: 5rpx 30rpx;
+  border-bottom: 1px solid #89bdf7;
 }
 
 .article-header {
@@ -56,4 +57,26 @@
 .article-content {
   font-size: 14px;
   line-height: 1.5;
+}
+.carousel-cover-mh{
+  float:left;
+  width:30%;
+  padding-right:5%;
+    height:80px;
+
+}
+.article-introduce-mh{
+  float:right;
+  width:65%;
+  height:60px;
+  font-size:14px;
+}
+.article-clear{
+  clear:both;
+}
+.article-item{
+  clear:both;
+}
+.article-left-article{
+  position:relative;
 }

@@ -1,4 +1,4 @@
-<view class="container">
+<view class="page">
   <swiper class="carousel" indicator-dots="true" autoplay="true">
     <block wx:for="{{carousel}}" wx:key="{{id}}">
       <swiper-item>
@@ -8,24 +8,22 @@
       </swiper-item>
     </block>
   </swiper>
-  
-  <swiper class="articles-swiper" current="{{current}}" bindchange="handleChange">
-    <block wx:for="{{articles.essay}}" wx:for-index="idx" wx:key="{{content_id}}">
-      <swiper-item class="articles-swiper-item">
-        <scroll-view class="articles" scroll-y="true">
-          <view class="articles-card">
-            <import src="templates/essayItem.wxml"/>
-            <template is="essay-item" data="{{item: articles['essay'][idx]}}"/>
-
-            <import src="templates/serialItem.wxml"/>
-            <template is="serial-item" data="{{item: articles['serial'][idx]}}"/>
-
-            <import src="templates/questionItem.wxml"/>
-            <template is="question-item" data="{{item: articles['question'][idx]}}"/>
-          </view>
-        </scroll-view>
-      </swiper-item>
-    </block>
-    <swiper-item></swiper-item>
-  </swiper>
+  <view class="page__bd">
+    <view class="weui-panel__bd">
+        <navigator url="detail/news?id={{item.id}}" wx:for="{{articles}}" wx:for-index="idx" wx:key="{{content_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" style="flex-wrap:wrap">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{item.thumbnail_base_url + '/' + item.thumbnail_path}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{item.title}}</view>
+                <view class="weui-media-box__desc">{{item.introduce}}</view>
+            </view>
+            <view class="weui-media-box__info cb" style="width:100%">
+                <view class="weui-media-box__info__meta">李记者{{item.author}}</view>
+                <view class="weui-media-box__info__meta">时间</view>
+                <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">早间新闻</view>
+            </view>    
+        </navigator>                  
+    </view>
+  </view>
 </view>

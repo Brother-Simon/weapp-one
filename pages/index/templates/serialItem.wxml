@@ -3,6 +3,7 @@
     <view class="article-header">
       <text class="article-title">{{item.title}}</text>
       <text class="article-type">连载</text>
+      <img src=""></img>
       <view class="article-author">
         <text>{{item.author.user_name}}</text>
       </view>

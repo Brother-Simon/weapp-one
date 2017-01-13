@@ -1,31 +1,33 @@
-const host = 'http://v3.wufazhuce.com:8000'
+const host = 'https://api.todolists.cn/frontend/web/api/v1'
 const wxRequest = (params, url) => {
   wx.showToast({
     title: '加载中',
     icon: 'loading'
   })
-  console.log(13213213);
-  params.success(params.res);
 
-  // wx.request({
-  //   url: url,
-  //   method: params.method || 'GET',
-  //   data: params.data || {},
-  //   header: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   success: (res) => {
-  //     params.success && params.success(params.res)
-  //     wx.hideToast()
-  //   },
-  //   fail: (res) => {
-  //     params.fail && params.fail(res)
-  //   },
-  //   complete: (res) => {
-  //     params.complete && params.complete(res)
-  //   }
-  // })
+  wx.request({
+    url: url,
+    method: params.method || 'GET',
+    data: params.data || {},
+    header: {
+      'Content-Type': 'application/json'
+    },
+    success: (res) => {
+      console.log(res)
+      params.success(res)
+      wx.hideToast()
+    },
+    fail: (res) => {
+      params.fail && params.fail(res)
+    },
+    complete: (res) => {
+      params.complete && params.complete(res)
+    }
+  })
 }
+
+//news
+const getNews = (params) => wxRequest(params, host + '/news/' + params.query.id)
 
 // Index
 const getVolById = (params) => wxRequest(params, host + '/api/hp/detail/' + params.query.id)
@@ -54,6 +56,7 @@ const getMovieDetailById = (params) => wxRequest(params, host + '/api/movie/deta
 const getMovieStoryById = (params) => wxRequest(params, host + '/api/movie/' + params.query.id + '/story/1/0')
 
 module.exports = {
+  getNews,
   getVolById,
   getVolIdList,
   getVolsByMonth,
