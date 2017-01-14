@@ -1,5 +1,5 @@
-<view class="container">
-  <swiper class="vol-swiper" current="{{current}}" bindchange="handleChange">
+<view class="page" style="height:100%">
+  <swiper class="vol-swiper" current="{{current}}" bindchange="handleChange" indicator-dots="true">
     <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
       <swiper-item class="vol-swiper-item">
         <import src="templates/volItem.wxml"/>

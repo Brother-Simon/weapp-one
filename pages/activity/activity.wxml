@@ -1,12 +1,12 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">{{ news_data.title }}</view>
-        <view class="page__desc">2016-01-03    共度晨光</view>
+        <view class="page__title">“龙江力量——2016首届龙江企业社会责任榜”发布仪式隆重举行！</view>
+        <view class="page__desc">2016-12-23 龙视新闻在线</view>
     </view>
     <view class="page__bd">
         <view class="weui-article">
             <view class="weui-article__section">
-                <import src="../templates/wxParse.wxml"/>
+                <import src="wxParse/wxParse.wxml"/>
                 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
             </view>
         </view>

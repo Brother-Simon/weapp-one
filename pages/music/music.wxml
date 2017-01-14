@@ -1,11 +1,45 @@
-<view class="container">
-  <swiper class="musics-swiper" current="{{current}}" bindchange="handleChange">
-    <block wx:for="{{musics}}" wx:key="id" wx:for-index="idx">
-      <swiper-item class="musics-swiper-item">
-        <import src="templates/musicItem.wxml"/>
-        <template is="music-item" data="{{item: item}}"/>
-      </swiper-item>
-    </block>
-    <swiper-item></swiper-item>
-  </swiper>
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item" style="padding: 0 4px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 4px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 4px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
+            </view>
+
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item" style="padding: 0 2px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 2px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 2px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 2px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item" style="padding: 0 5px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (9).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 5px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (10).png" mode="widthFix"></image>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item" style="padding: 0 5px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (11).png" mode="widthFix"></image>
+            </view>
+            <view class="weui-flex__item" style="padding: 0 5px">
+                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).jpg" mode="widthFix"></image>
+            </view>                                                                                                                                </view>          
+    </view>
 </view>

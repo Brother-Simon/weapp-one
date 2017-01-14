@@ -5,15 +5,13 @@
     "pages/index/essay",
     "pages/index/detail/news",
     "pages/index/serial/serial",
-    "pages/index/question/question",
     "pages/reading/index",
     "pages/reading/monthly/monthly",
     "pages/reading/detail/detail",
     "pages/music/music",
     "pages/music/monthly/monthly",
     "pages/music/detail/detail",
-    "pages/movie/movie",
-    "pages/movie/detail/detail",
+    "pages/activity/activity",
     "pages/history/history"
   ],
   "window":{
@@ -43,7 +41,7 @@
       "iconPath": "image/list.png",
       "selectedIconPath": "image/list_active.png"
     },{
-      "pagePath": "pages/movie/movie",
+      "pagePath": "pages/activity/activity",
       "text": "活动",
       "iconPath": "image/activity.png",
       "selectedIconPath": "image/activity_active.png"

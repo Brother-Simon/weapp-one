@@ -1,15 +1,18 @@
 <template name="vol-item">
   <view class="vol-card">
-    <image class="vol-picture" src="/image/img1.jpg" mode="aspectFill"></image>
+    <view class="section tc">
+      <video id="myVideo" style="width:100%" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    </view>
     <view class="vol-meta">
-      <text class="vol-number">NO.1</text>
-      <text class="vol-author">审讯现场图</text>
+      <text class="vol-number">NO.1{{}}</text>
+      <text class="vol-author">两会现场视频</text>
     </view>
     <view class="vol-content">
-      <text class="vol-content-text">奥迪男撞飞交警，现已投案自首,奥迪男撞飞交警，现已投案自首奥迪男撞飞交警，现已投案自首奥迪男撞飞交警，现已投案自首</text>
+      <text class="vol-content-text">这是视频内容简介，请在后台填写。这是视频内容简介，请在后台填写。这是视频内容简介，请在后台填写。</text>
     </view>
     <view class="vol-makettime">
       <text class="vol-makettime-text">2017-1-13 12:00:00</text>
     </view>
+
   </view>
 </template>
