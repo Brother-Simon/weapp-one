@@ -1,18 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/index/monthly/monthly",
-    "pages/index/essay",
     "pages/index/detail/news",
-    "pages/index/serial/serial",
-    "pages/reading/index",
-    "pages/reading/monthly/monthly",
-    "pages/reading/detail/detail",
-    "pages/music/music",
-    "pages/music/monthly/monthly",
-    "pages/music/detail/detail",
-    "pages/activity/activity",
-    "pages/history/history"
+    "pages/live/index",
+    "pages/product/index",
+    "pages/activity/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -31,17 +23,17 @@
       "iconPath": "image/home.png",
       "selectedIconPath": "image/home_active.png"
     }, {
-      "pagePath": "pages/reading/index",
+      "pagePath": "pages/live/index",
       "text": "直播",
       "iconPath": "image/movie.png",
       "selectedIconPath": "image/movie_active.png"
     },{
-      "pagePath": "pages/music/music",
+      "pagePath": "pages/product/index",
       "text": "栏目",
       "iconPath": "image/list.png",
       "selectedIconPath": "image/list_active.png"
     },{
-      "pagePath": "pages/activity/activity",
+      "pagePath": "pages/activity/index",
       "text": "活动",
       "iconPath": "image/activity.png",
       "selectedIconPath": "image/activity_active.png"
