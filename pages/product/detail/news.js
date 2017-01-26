@@ -10,7 +10,7 @@ Page({
     console.log(options);
     this.data.id = options.id;
     // 页面初始化 options为页面跳转所带来的参数
-    api.getNews({
+    api.getProduct({
       query: {
         id: options.id
       },
@@ -24,11 +24,11 @@ Page({
       }
     })
   },
-    onShareAppMessage: function () {
+  onShareAppMessage: function () {
     return {
       title: '北极村',
       desc: '中国龙 行天下',
-      path: '/pages/index/detail/news?id=' + this.data.id
+      path: '/pages/product/detail/news?id=' + this.data.id
     }
   },
   onReady:function(){

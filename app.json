@@ -4,6 +4,7 @@
     "pages/index/detail/news",
     "pages/live/index",
     "pages/product/index",
+    "pages/product/detail/news",
     "pages/activity/index"
   ],
   "window":{
@@ -29,7 +30,7 @@
       "selectedIconPath": "image/movie_active.png"
     },{
       "pagePath": "pages/product/index",
-      "text": "栏目",
+      "text": "龙阅",
       "iconPath": "image/list.png",
       "selectedIconPath": "image/list_active.png"
     },{

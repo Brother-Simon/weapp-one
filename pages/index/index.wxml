@@ -1,29 +1,29 @@
 <view class="page">
   <view class="page__bd">
       <view class="weui-panel weui-panel_access">
-        <navigator url="detail/news?id={{item.id}}" wx:for="{{articles}}" wx:for-index="idx" wx:key="{{content_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" style="flex-wrap:wrap">
-            <view wx:if="{{idx%2 == 0}}" >
+        <navigator url="detail/news?id={{item.id}}" wx:for="{{articles}}" wx:for-index="idx" wx:key="{{content_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" style="flex-wrap:wrap;padding:5px 5px 5px 10px">
+            <view wx:if="{{item.is_large_pic == 1}}" >
                 <view class="weui-media-box__info" style="width:100%">
-                    <image class="carousel-cover" src="/image/yewen.jpg" mode="scaleToFill"></image>
+                    <image class="carousel-cover" src="{{item.thumbnail_base_url + '/' + item.thumbnail_path}}" mode="scaleToFill"></image>
                 </view>
-                <view class="weui-media-box__title weui-media-box__title_in-text" style="font-weight:bold">这是大图新闻图表题</view>
-                <view class="weui-media-box__desc">这是大图新闻图简介，这是大图新闻图简介,这是大图新闻图简介</view>
+                <view class="weui-media-box__title weui-media-box__title_in-text" style="font-weight:bold">{{item.title}}</view>
+                <view class="weui-media-box__desc">{{item.introduce}}</view>
                 <view class="weui-media-box__info">
-                    <view class="weui-media-box__info__meta">新闻夜航</view>
-                    <view class="weui-media-box__info__meta">2017-1-14</view>
+                    <view class="weui-media-box__info__meta">{{ item.product && item.product.title}}</view>
+                    <view class="weui-media-box__info__meta">{{ item.publish_time }}</view>
                 </view>
               </view>
-              <block  wx:if="{{idx%2 == 1}}">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="{{item.thumbnail_base_url + '/' + item.thumbnail_path}}" />
-                    </view>
+              <block  wx:if="{{item.is_large_pic == 0}}">
+
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title" style="font-weight:bold">{{item.title}}</view>
-                        <view class="weui-media-box__desc">{{item.introduce}}</view>
+                        <view class="" style="font-weight: bold;font-size:16px;">{{item.title}}</view>
+                        <view class="weui-media-box__info cb" style="width:100%">
+                            <view class="weui-media-box__info__meta">{{ item.product && item.product.title }}</view>
+                            <view class="weui-media-box__info__meta">{{ item.publish_time }}</view>
+                        </view>
                     </view>
-                    <view class="weui-media-box__info cb" style="width:100%">
-                        <view class="weui-media-box__info__meta">共度晨光</view>
-                        <view class="weui-media-box__info__meta">2017-1-14</view>
+                        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" style="width:50%;height:140px;margin-right:0px" mode="aspectFit">
+                        <image class="weui-media-box__thumb" src="{{item.thumbnail_base_url + '/' + item.thumbnail_path}}" />
                     </view>
                </block>
             </navigator>     

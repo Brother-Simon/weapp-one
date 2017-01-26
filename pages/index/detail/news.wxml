@@ -1,14 +1,10 @@
-<view class="page">
-    <view class="page__hd">
+    <view class="page__hd" style="padding:10px">
         <view class="page__title">{{ news_data.title }}</view>
-        <view class="page__desc">2016-01-03    共度晨光</view>
-    </view>
-    <view class="page__bd">
-        <view class="weui-article">
+        <view class="page__desc" style="padding-bottom:10px">{{ news_data.product && news_data.product.title }}  {{ news_data.publish_time }}</view>
+        <view>
             <view class="weui-article__section">
                 <import src="../templates/wxParse.wxml"/>
                 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
             </view>
         </view>
     </view>
-</view>

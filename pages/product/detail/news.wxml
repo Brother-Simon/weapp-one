@@ -1,0 +1,8 @@
+    <view class="page__hd" style="padding:10px">
+        <view>
+            <view class="weui-article__section">
+                <import src="wxParse/wxParse.wxml"/>
+                <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+            </view>
+        </view>
+    </view>

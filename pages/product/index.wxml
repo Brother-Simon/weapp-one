@@ -1,45 +1,12 @@
 <view class="page">
     <view class="page__bd page__bd_spacing">
-        <view class="weui-flex">
-            <view class="weui-flex__item" style="padding: 0 4px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 4px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 4px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
-            </view>
-
-        </view>
-        <view class="weui-flex">
-            <view class="weui-flex__item" style="padding: 0 2px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 2px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 2px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 2px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (2).png" mode="widthFix"></image>
-            </view>
-        </view>
-        <view class="weui-flex">
-            <view class="weui-flex__item" style="padding: 0 5px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (9).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 5px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (10).png" mode="widthFix"></image>
-            </view>
-        </view>
-        <view class="weui-flex">
-            <view class="weui-flex__item" style="padding: 0 5px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (11).png" mode="widthFix"></image>
-            </view>
-            <view class="weui-flex__item" style="padding: 0 5px">
-                <image class="carousel-cover" style="width:100%" src="/image/jingpin1 (1).jpg" mode="widthFix"></image>
-            </view>                                                                                                                                </view>          
+    <view class="weui-flex" style="flex-wrap:wrap">
+        <block wx:for="{{data}}" wx:for-index="idx" wx:key="{{data_id}}">
+            <navigator url="detail/news?id={{item.id}}" style="width:46%;padding:2%;">
+                        <image class="carousel-cover" style="width:100%" src="{{item.thumbnail_base_url + '/' + item.thumbnail_path}}" mode="widthFix"></image>
+                        <view style="margin-top:-7px;text-align:center;background-color:rgba(153, 153, 153, 0.29)">{{item.title}}</view>
+            </navigator>
+        </block>
+    </view>
     </view>
 </view>

@@ -28,6 +28,9 @@ const wxRequest = (params, url) => {
 
 //news
 const getNews = (params) => wxRequest(params, host + '/news/' + params.query.id)
+const getRefinedProduct = (params) => wxRequest(params, host + '/products');
+const getLive = (params) => wxRequest(params, host + '/lives');
+const getProduct = (params) => wxRequest(params, host + '/products/' + params.query.id);
 
 // Index
 const getVolById = (params) => wxRequest(params, host + '/api/hp/detail/' + params.query.id)
@@ -56,7 +59,10 @@ const getMovieDetailById = (params) => wxRequest(params, host + '/api/movie/deta
 const getMovieStoryById = (params) => wxRequest(params, host + '/api/movie/' + params.query.id + '/story/1/0')
 
 module.exports = {
+  getProduct,
+  getLive,
   getNews,
+  getRefinedProduct,
   getVolById,
   getVolIdList,
   getVolsByMonth,

@@ -1,11 +1,22 @@
 <view class="page" style="height:100%">
   <swiper class="vol-swiper" current="{{current}}" bindchange="handleChange" indicator-dots="true">
-    <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
+    <block wx:for="{{live_data}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
       <swiper-item class="vol-swiper-item">
-        <import src="templates/volItem.wxml"/>
-        <template is="vol-item" data="{{item: item}}"/>
+          <view class="vol-card">
+            <view class="section tc">
+              <video id="{{ 'myVideo_' + idx }}" style="width:100%" src="{{ item.video_url }}" danmu-list="{{danmuList}}" ></video>
+            </view>
+            <view class="vol-meta">
+              <text class="vol-number">{{ item.title }}</text>
+            </view>
+            <view class="vol-content">
+              <text class="vol-content-text">{{ item.introduce }}</text>
+            </view>
+            <view class="vol-makettime">
+              <text class="vol-makettime-text">{{ item.publish_time }}</text>
+            </view>
+          </view>
       </swiper-item>
     </block>
-    <swiper-item></swiper-item>
   </swiper>
 </view>

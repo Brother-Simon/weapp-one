@@ -6,24 +6,29 @@ import api from '../../api/api.js'
 import util from '../../utils/util.js'
 
 Page({
+  onShareAppMessage: function () {
+    return {
+      title: '北极村',
+      desc: '中国龙 行天下',
+      path: '/pages/product/index'
+    }
+  },
   data: {
     musics: [],
     current: 0,
     playId: -1
   },
   onLoad: function () {
-    api.getMusicIdList({
+    api.getRefinedProduct({
       success: (res) => {
-        if (res.data.res === 0) {
-          let idList = res.data.data
-          this.getMusics(idList)
-        }
+          let data = res.data.items;
+          this.setData({ data });
       }
     })
   },
   onReady: function () {
     wx.setNavigationBarTitle({
-      title: '精品栏目'
+      title: '龙阅'
     })
   },
   getMusics: function (idList) {

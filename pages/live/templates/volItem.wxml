@@ -1,18 +1,16 @@
 <template name="vol-item">
   <view class="vol-card">
     <view class="section tc">
-      <video id="myVideo" style="width:100%" src="http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&v=20140714" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+      <video id="myVideo" style="width:100%" src="{{ item.video_url }}" danmu-list="{{danmuList}}"></video>
     </view>
     <view class="vol-meta">
-      <text class="vol-number">NO.1{{}}</text>
-      <text class="vol-author">两会现场视频</text>
+      <text class="vol-number">{{ item.title }}</text>
     </view>
     <view class="vol-content">
-      <text class="vol-content-text">这是视频内容简介，请在后台填写。这是视频内容简介，请在后台填写。这是视频内容简介，请在后台填写。</text>
+      <text class="vol-content-text">{{ item.introduce }}</text>
     </view>
     <view class="vol-makettime">
-      <text class="vol-makettime-text">2017-1-13 12:00:00</text>
+      <text class="vol-makettime-text">{{ item.publish_time }}</text>
     </view>
-
   </view>
 </template>
